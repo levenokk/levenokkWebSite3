@@ -25,6 +25,10 @@ h5,
 h6 {
   padding: 0;
   margin: 0;
+  span {
+    color: $red;
+    transition: color 0.3s ease-in-out;
+  }
 }
 
 p {
@@ -42,7 +46,7 @@ ol {
 a {
   text-decoration: none;
   display: inline-block;
-  &:hover{
+  &:hover {
     text-decoration: none;
   }
 }
@@ -57,60 +61,57 @@ a {
 
 /* <===== header =====> */
 
-.header{
+.header {
   background-position: top;
   background-repeat: no-repeat;
   height: 1060px;
   @include Montserrat();
 }
 
-.header__row{
+.header__row {
   margin-bottom: 305px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.nav{
+.nav {
   ul li {
     display: inline-block;
     margin: 0 18px;
     text-transform: uppercase;
     font-size: 14px;
-    a{
+    a {
       color: $darkBlue;
-      transition: color .3s ease-in-out;
-      &:hover{
+      transition: color 0.3s ease-in-out;
+      &:hover {
         color: $red;
       }
     }
-    i{
+    i {
       font-size: 22px;
       color: $red;
-      transition: color .3s ease-in-out;
-      &:hover{
+      transition: color 0.3s ease-in-out;
+      &:hover {
         color: $darkBlue;
       }
     }
   }
 }
 
-.slogan{
+.slogan {
   max-width: 480px;
   color: $darkBlue;
   display: inline-block;
-  h1{
+  h1 {
     font-weight: bold;
     font-size: 40px;
     line-height: 53px;
     text-transform: uppercase;
-    letter-spacing: -.43px;
+    letter-spacing: -0.43px;
     margin-bottom: 10px;
-    span{
-      color: red;
-    }
   }
-  p{
+  p {
     @include Sans();
     font-size: 20px;
     line-height: 43px;
@@ -118,18 +119,18 @@ a {
   }
 }
 
-.slogan__btn{
+.slogan__btn {
   font-weight: bold;
   text-transform: uppercase;
   @include Sans();
   font-size: 15px;
-  a{
+  a {
     color: #fff;
     padding: 24px 42px;
     background-color: $red;
     border-radius: 6px;
-    transition: background-color .3s ease-in-out;
-    &:hover{
+    transition: background-color 0.3s ease-in-out;
+    &:hover {
       background-color: $darkBlue;
     }
   }
@@ -139,49 +140,45 @@ a {
 
 /* <=====  main =====> */
 
-.main{
+.main {
   margin-top: 65px;
+  margin-bottom: 20px;
 }
 
-.main__row{
-  
+.main__row {
 }
 
-.posts{
+.posts {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 90px;
 }
 
-.post{
+.post {
   margin-top: 15px;
   padding: 10px 0;
   @include Montserrat();
   max-width: 300px;
-  h5{
+  h5 {
     font-weight: bold;
     font-size: 26px;
     text-transform: uppercase;
     margin-bottom: 25px;
-    a{
+    a {
       color: $darkBlue;
-      transition: color .3s ease-in-out;
+      transition: color 0.3s ease-in-out;
     }
-    span{
-      color: red;
-      transition: color .3s ease-in-out;
-    }
-    &:hover{
-      a{
+    &:hover {
+      a {
         color: $red;
       }
-      span{
+      span {
         color: $darkBlue;
       }
     }
   }
-  p{
+  p {
     font-size: 15px;
     line-height: 22px;
     color: $lightGray;
@@ -189,43 +186,54 @@ a {
   }
 }
 
-.post__btn{
-  a{
+.post__btn {
+  a {
     color: $red;
     text-transform: uppercase;
-    transition: color .3s ease-in-out;
+    transition: color 0.3s ease-in-out;
   }
-  span{
+  span {
     margin-left: 10px;
     font-size: 18px;
     vertical-align: middle;
   }
-  &:hover a{
+  &:hover a {
     color: $darkBlue;
+  }
+  &-right {
+    float: right;
   }
 }
 
-.portfolio{
+.portfolio {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.portfolio__block{
+.portfolio__block {
   max-width: 380px;
-  h2{
+  h2 {
     @include Montserrat();
     font-weight: bold;
-    color: $darkBlue;
     text-transform: uppercase;
     margin-bottom: 20px;
     font-size: 40px;
-    letter-spacing: -.43px;
-    span{
-      color: $red;
+    letter-spacing: -0.43px;
+    a {
+      color: $darkBlue;
+      transition: color 0.2s linear;
+    }
+    &:hover {
+      a {
+        color: $red;
+      }
+      span {
+        color: $darkBlue;
+      }
     }
   }
-  p{
+  p {
     @include Sans();
     font-size: 15px;
     color: $lightGray;
@@ -233,19 +241,120 @@ a {
   }
 }
 
-.portfolio__suptext{
+.portfolio__suptext {
   @include Sans();
   font-weight: bold;
   font-size: 16px;
   margin-bottom: 30px;
-  p{
-  
+  p {
     color: $darkBlue;
   }
 }
 
 /* <===== end main =====> */
 
+/* <===== team =====> */
 
+.team {
+  margin-bottom: 95px;
+}
+
+.team__title-block {
+  margin-bottom: 40px;
+  h3 {
+    color: $darkBlue;
+    text-transform: uppercase;
+    font-size: 32px;
+    @include Montserrat();
+    font-weight: bold;
+    line-height: -0.2px;
+    margin-bottom: 15px;
+  }
+  p {
+    color: $lightGray;
+    font-size: 16px;
+    @include Sans();
+  }
+}
+
+.team__posts {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.team-post {
+  max-width: 300px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 50px;
+}
+.team-post__content {
+  margin-top: 10px;
+  margin-left: 30px;
+  display: inline-block;
+  h5 {
+    color: $darkBlue;
+    @include Montserrat();
+    font-weight: bold;
+    font-size: 22px;
+    letter-spacing: -0.2px;
+    margin-bottom: 10px;
+    transition: color 0.2s linear;
+  }
+  a:hover h5 {
+    color: $red;
+  }
+}
+.team-post__work {
+  color: $red;
+  font-size: 14px;
+  @include Sans();
+  margin-bottom: 10px;
+}
+
+.team-post__text {
+  color: $lightGray;
+  font-size: 14px;
+  line-height: 20px;
+}
+/* <===== end team =====> */
+
+/* <===== footer =====> */
+
+.footer {
+  padding-bottom: 40px;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.footer_socials__inner {
+  font-size: 20px;
+  li {
+    display: inline-block;
+  }
+  li + li {
+    margin-left: 22px;
+  }
+  a {
+    color: $lightGray;
+    transition: color 0.2s linear;
+    &:hover {
+      color: $red;
+    }
+  }
+}
+
+.footer__design {
+  color: $lightGray;
+  font-size: 13px;
+  @include Sans();
+}
+
+/* <===== end footer =====> */
 
 @import "media";
